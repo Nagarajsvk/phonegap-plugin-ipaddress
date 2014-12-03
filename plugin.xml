@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <plugin id="it.weconstudio.phonegap.plugins.android.IpAddress" version="0.1" provider-name="weconstudio">
+    <plugin
+    	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    	xmlns:rim="http://www.blackberry.com/ns/widgets"
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	id="it.weconstudio.phonegap.plugins.android.IpAddress" 
+    	version="0.1" 
+    	provider-name="weconstudio">
         <name>IpAddress</name>
         <description>IP Address detection plugin</description>
         <license>Apache 2.0</license>
 		<author>weconstudio</author>
         <keywords>weconstudio,ip,address,phonegap,plugins</keywords>
-
+	<engines>
+            <engine name="cordova" version=">=3.0.0" />
+    	</engines>
+    	
 	<js-module src="www/IpAddress.js" name="IpAddress">
     	<clobbers target="window.IpAddress" />
 	</js-module>
@@ -14,6 +23,7 @@
 		<config-file target="res/xml/config.xml" parent="/*">
 		    <feature name="IpAddress" >
 		        <param name="android-package" value="it.weconstudio.phonegap.plugins.android.IpAddress"/>
+		        <param name="onload" value="true" />
 		    </feature>
 		</config-file>
 
